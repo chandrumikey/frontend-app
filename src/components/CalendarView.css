@@ -1,0 +1,92 @@
+Make calendar take full screen
+.calendar-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px); /* full screen minus navbar height */
+  background-color: var(--bg-color);
+  padding: 20px;
+}
+
+/* Calendar itself */
+.react-calendar {
+  width: 100%;
+  max-width: 1200px;   /* keeps it responsive */
+  height: auto;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Calendar tiles (days) */
+.react-calendar__tile {
+  padding: 1.5rem 0.5rem;
+  text-align: center;
+}
+
+/* Highlight today */
+.react-calendar__tile--now {
+  background: #3498db;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.calendar-view {
+  padding: 20px;
+}
+
+.calendar-view.dark {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --card-bg: #2d2d2d;
+}
+
+.calendar-view.light {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --card-bg: #f8f9fa;
+}
+
+.calendar-view h2 {
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.react-calendar {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 1rem;
+  border: none;
+  color: var(--text-color);
+}
+
+.task-dot {
+  display: inline-block;
+  margin-top: 2px;
+  width: 6px;
+  height: 6px;
+  background: #3498db;
+  border-radius: 50%;
+}
+
+.task-list {
+  margin-top: 1.5rem;
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  color: var(--text-color);
+}
+
+.task-list ul {
+  padding-left: 1.2rem;
+}
+
+.task-list li {
+  margin-bottom: 0.5rem;
+}
+
+.priority-high { color: #e74c3c; }
+.priority-medium { color: #f39c12; }
+.priority-low { color: #2ecc71; }

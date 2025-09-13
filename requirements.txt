@@ -1,0 +1,8 @@
+npm install react-icons
+npm install recharts    
+npm install @fullcalendar/react @fullcalendar/daygrid @fullcalendar/interaction
+npm install @fullcalendar/timegrid @fullcalendar/list
+npm install @fullcalendar/core
+npm install @fullcalendar/bootstrap
+npm install bootstrap
+npm install @emotion/react @emotion/styled

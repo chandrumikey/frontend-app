@@ -2,8 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { tasksAPI } from '../services/api';
 import TaskForm from './TaskForm';
 import TaskStats from './TaskStats';
+import { useNavigate } from 'react-router-dom';
+
+
 
 const TaskList = () => {
+    const navigate = useNavigate();
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -76,6 +80,7 @@ const TaskList = () => {
   return (
     <div className="task-list-container">
       <div className="task-header">
+
         <h2>My Tasks</h2>
         <div className="header-actions">
           <button 
@@ -87,6 +92,13 @@ const TaskList = () => {
           <button onClick={() => setEditingTask({})} className="btn-primary">
             + New Task
           </button>
+            <button
+  className="btn btn-primary"
+  onClick={() => navigate('/calendar')}
+>
+  Calendar
+</button>
+
         </div>
       </div>
 
@@ -170,6 +182,7 @@ const TaskList = () => {
               >
                 Delete
               </button>
+            
             </div>
           </div>
         ))}
