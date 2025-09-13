@@ -85,13 +85,14 @@ const TaskList = () => {
         <div className="header-actions">
           <button 
             onClick={() => setShowStats(!showStats)} 
-            className="btn-secondary"
+            className="btn-subtle"
           >
             {showStats ? 'Hide Stats' : 'Show Stats'}
           </button>
-          <button onClick={() => setEditingTask({})} className="btn-primary">
+          <button type="button" onClick={() => setShowStats(!showStats)} className="btn-primary">
             + New Task
           </button>
+          
             <button
   className="btn btn-primary"
   onClick={() => navigate('/calendar')}
